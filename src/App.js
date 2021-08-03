@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import Layout from './hoc/Layout/Layout'
+import Account from './containers/Account/Account'
+import NewPayment from './components/Payments/NewPayment/NewPayments';
+import {Route} from 'react-router-dom'
 import './App.css';
+import './assets/css/bootstrap.min.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Route path="/new-payment" component={NewPayment}></Route>
+        <Route path="/" exact component={Account}></Route>
+      </Layout>
     </div>
   );
 }
