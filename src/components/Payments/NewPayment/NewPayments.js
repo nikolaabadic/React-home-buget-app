@@ -4,18 +4,18 @@ import './NewPayment.css'
 const newPayment = () => {
     return (
         <Fragment>
-            <h1>New payment</h1>
+            <h1 className="display-4 mt-3">New payment</h1>
             <hr />
             <div class="row">
                 <form class="payment">
                     <div>
                         <div class="form-group">
                             <label class="control-label">Date</label>
-                            <input readonly type="datetime"  class="form-control" />
+                            <input readonly type="date"  class="form-control" />
                         </div>
                         <div class="form-group">
                             <label class="control-label">From account</label>
-                            <input disabled class="form-control"/>
+                            <input class="form-control"/>
                         </div>
                         <div class="form-group">
                             <label class="control-label">Recipient Account number</label>
@@ -39,7 +39,7 @@ const newPayment = () => {
                     <div class="final-column">
                         <div class="form-group">
                             <label class="control-label">Amount</label>
-                            <input class="form-control" />
+                            <input class="form-control" type="number" min="0"/>
                         </div>
                         <div class="form-group create">
                             <input type="submit" value="Create" class="btn btn-primary" />

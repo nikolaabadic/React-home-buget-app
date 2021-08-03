@@ -33,5 +33,6 @@
     }
     
     .NavigationItem a:hover, .NavigationItem a:active, .NavigationItem a.active{
+        border-bottom: 4px solid transparent;
     }
 }

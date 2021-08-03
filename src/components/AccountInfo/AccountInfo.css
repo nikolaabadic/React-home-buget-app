@@ -1,0 +1,15 @@
+.accountDetails{
+    display:flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+.cardImg{
+    height:100px;
+    width:auto;
+}
+.payment-icon{
+    height:40px;
+    width:auto;
+    vertical-align:text-bottom;
+}

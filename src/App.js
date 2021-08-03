@@ -2,7 +2,6 @@ import Layout from './hoc/Layout/Layout'
 import Account from './containers/Account/Account'
 import NewPayment from './components/Payments/NewPayment/NewPayments';
 import {Route} from 'react-router-dom'
-import './App.css';
 import './assets/css/bootstrap.min.css'
 
 function App() {
