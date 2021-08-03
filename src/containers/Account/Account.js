@@ -5,7 +5,8 @@ import Payments from '../../components/Payments/Payments'
 const account = () => {
     return(
         <Fragment>
-            <AccountInfo/>
+            <AccountInfo
+                currency="RSD" type="Current" number="1000-2000-3000" amount="0"/>
             <Payments/>
         </Fragment>
     )

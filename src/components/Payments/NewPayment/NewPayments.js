@@ -1,9 +1,12 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, Component } from 'react'
 import './NewPayment.css'
 
-const newPayment = () => {
-    return (
-        <Fragment>
+class NewPayment extends Component{
+
+
+    render(){
+        return(
+            <Fragment>
             <h1 className="display-4 mt-3">New payment</h1>
             <hr />
             <div class="row">
@@ -49,7 +52,8 @@ const newPayment = () => {
                 </form>
             </div>
         </Fragment>
-    )
+        )
+    }
 }
 
-export default newPayment
+export default NewPayment
