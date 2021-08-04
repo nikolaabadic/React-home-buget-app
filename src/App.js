@@ -4,7 +4,7 @@ import NewPayment from './components/Payments/NewPayment/NewPayments';
 import {Route} from 'react-router-dom'
 import './assets/css/bootstrap.min.css'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Layout>
