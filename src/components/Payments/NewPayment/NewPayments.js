@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import {connect} from 'react-redux'
+import { Redirect } from 'react-router'
 import Input from '../../Input/Input'
 import * as actions from '../../../store/actions/actions'
 import './NewPayment.css'
@@ -11,9 +12,9 @@ class NewPayment extends Component{
             fromAccount: '',
             toAccount: '',
             purpose: '',
-            model: 0,
+            model: '',
             referenceNumber: '',
-            amount: 0,
+            amount: '',
             type: 'income'
         }
     }
@@ -32,8 +33,8 @@ class NewPayment extends Component{
         event.preventDefault()
 
         this.props.onCreatePayment(this.state.payment)
+        this.setState({added: true})
     }
-
     render(){
         const formElements = []
         for(let key in this.state.payment){
@@ -43,6 +44,11 @@ class NewPayment extends Component{
             })
         }
 
+        let redirect = null
+        if(this.state.added){
+            this.props.onGetAllPayments()
+            redirect = <Redirect to="/"/>
+        }
         const form = (
             <div className="row">
                 <form className="payment" onSubmit={this.paymentHandler}>
@@ -69,9 +75,9 @@ class NewPayment extends Component{
                         <div className="form-group create pt-4">
                             <input type="submit" value="Create" className="btn btn-primary" />
                         </div>
-
                     </div>
                 </form>
+                {redirect}
             </div>
         )
 
@@ -88,7 +94,8 @@ class NewPayment extends Component{
 
 const mapDispatchToProps = dispatch =>{
     return{
-        onCreatePayment: (data) => dispatch(actions.createPayment(data))
+        onCreatePayment: (data) => dispatch(actions.createPayment(data)),
+        onGetAllPayments: () => dispatch(actions.getPayments())
     }
 }
 
