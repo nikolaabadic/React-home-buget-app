@@ -10,25 +10,27 @@ const acountInfo = (props) => {
             <div className="accountDetails pt-3">
                 <div className="col">
                     <table>
-                        <tr>
-                            <td className="col-sm-5">Currency:</td>
-                            <td className="col-sm-7">{props.currency}</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td className="col-sm-5">Currency:</td>
+                                <td className="col-sm-7">{props.currency}</td>
+                            </tr>
 
-                        <tr>
-                            <td className="col-sm-5">Account type:</td>
-                            <td className="col-sm-7">{props.type}</td>
-                        </tr>
+                            <tr>
+                                <td className="col-sm-5">Account type:</td>
+                                <td className="col-sm-7">{props.type}</td>
+                            </tr>
 
-                        <tr>
-                            <td className="col-sm-5">Account number:</td>
-                            <td className="col-sm-7">{props.number}</td>
-                        </tr>
+                            <tr>
+                                <td className="col-sm-5">Account number:</td>
+                                <td className="col-sm-7">{props.number}</td>
+                            </tr>
 
-                        <tr>    
-                            <td className="col-sm-5">Amount:</td>
-                            <td className="col-sm-7">{props.amount}</td>
-                        </tr>
+                            <tr>    
+                                <td className="col-sm-5">Amount:</td>
+                                <td className="col-sm-7"><strong>{props.amount}</strong></td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
                 <img className="cardImg" src={card} alt="Credit card"/>
